@@ -7,9 +7,11 @@ import Services.TicketRepository;
 import java.util.List;
 
 /**
- * Класс - провайдер для работы с базой данных билетов
+ * Класс - провайдер для работы с базой данных билетов v0.0.1
  */
 public class TicketProvider {
+    private ITicketRepo ticketRepo;
+
 
     public TicketProvider() {
         // Класс репозитория находится в единственном экземпляре для того, чтобы не создавать несколько подключений
@@ -24,7 +26,9 @@ public class TicketProvider {
      * @return список билетов
      * @throws RuntimeException
      */
-
+    public List<Ticket> getTickets(int routeNumber) throws RuntimeException {
+        return ticketRepo.readAll(routeNumber);
+    }
 
     /**
      * Метод обновления статуса билета
@@ -32,5 +36,8 @@ public class TicketProvider {
      * @param ticket билет
      * @return результат выполнения операции
      */
+    public boolean updateTicketStatus(Ticket ticket){
+        return ticketRepo.update(ticket);
+    }
 
 }
