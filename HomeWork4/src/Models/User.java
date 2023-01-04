@@ -3,10 +3,13 @@ package Models;
 import java.util.Objects;
 
 /**
- * Модель пользователя
+ * Модель пользователя v0.0.1
  */
 public class User {
-
+    private int id;
+    private String userName;
+    private long cardNumber;
+    private int hashPassword;
 
 
     public User(int id, String userName, int hashPassword, long cardNumber) {
@@ -24,6 +27,22 @@ public class User {
                 ", userName= " + userName +
                 ", cardNumber= " + (String.format("%016d", cardNumber)) +
                 " }";
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public long getCardNumber() {
+        return cardNumber;
+    }
+
+    public int getHashPassword() {
+        return hashPassword;
     }
 
     @Override
