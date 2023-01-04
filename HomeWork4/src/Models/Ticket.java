@@ -3,11 +3,49 @@ package Models;
 import java.util.Date;
 
 /**
- * Модель билета
+ * Модель билета v0.0.1
  */
 public class Ticket{
+    private long Id;
+    private int place;
+    private Date date;
+    private int  routeNumber;
+    private int zoneStart;
+    private int zoneStop;
+    private int price;
+    private boolean isValid;
 
+    public int getPlace() {
+        return place;
+    }
 
+    public Date getDate() {
+        return date;
+    }
+
+    public int getRouteNumber() {
+        return routeNumber;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public boolean getValid() {
+        return isValid;
+    }
+
+    public void setZoneStart(int zoneStart) {
+        this.zoneStart = zoneStart;
+    }
+
+    public void setZoneStop(int zoneStop) {
+        this.zoneStop = zoneStop;
+    }
+
+    public void setValid(boolean valid) {
+        isValid = valid;
+    }
 
     public Ticket(int routeNumber, int place, int price, Date date, boolean isValid) {
         this.routeNumber = routeNumber;
@@ -25,7 +63,7 @@ public class Ticket{
                 ", Place " + place +
                 ", Price " + price + " rub." +
                 ", Date " + date +
-                ", " + (isValid ? "Free" : "Busy");
+                ", " + (isValid ? "Free" : "Occupied");
     }
 
 
