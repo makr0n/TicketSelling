@@ -35,7 +35,7 @@ public class CashRepository implements ICashRepo {
     }
 
     @Override
-    public boolean transaction(int payment, long cardFrom, long carrierСard) throws RuntimeException {
+    public boolean transaction(int payment, long cardFrom, long carrierCard) throws RuntimeException {
         // Проводим валидацию аккаунтов
         BankAccount from = null;
         BankAccount to = null;
@@ -43,7 +43,7 @@ public class CashRepository implements ICashRepo {
             if (client.getCard() == cardFrom) {
                 from = client;
             }
-            if (client.getCard() == carrierСard) {
+            if (client.getCard() == carrierCard) {
                 to = client;
             }
         }

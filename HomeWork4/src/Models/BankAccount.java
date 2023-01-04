@@ -1,12 +1,12 @@
 package Models;
 
 /**
- * Модель банковского аккаунта
+ * Модель банковского аккаунта v0.0.1
  */
 public class BankAccount {
-
-
-
+    private long card;
+    private int balance;
+    private long oldCard;
 
     public BankAccount() {
         this.card = oldCard + 1;
@@ -14,11 +14,16 @@ public class BankAccount {
         balance = 1000;
     }
 
-    @Override
-    public String toString() {
-        return "BankAccount {" +
-                " card= " + (String.format("%016d", card)) +
-                ", balance= " + balance +
-                " }";
+    public void setBalance(int balance) {
+        this.balance = balance;
     }
+
+    public long getCard() {
+        return card;
+    }
+
+    public int getBalance() {
+        return balance;
+    }
+
 }

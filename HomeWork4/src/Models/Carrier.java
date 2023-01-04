@@ -3,6 +3,7 @@ package Models;
 import java.util.ArrayList;
 
 /**
+ * @PospelovSergei
  * Модель перевозчика v0.0.1
  */
 public class Carrier {
