@@ -4,6 +4,7 @@ import java.util.Date;
 
 /**
  * Модель билета v0.0.1
+ *
  */
 public class Ticket{
     private long Id;
