@@ -48,10 +48,9 @@ public class CashProvider {
      *
      * @param client
      */
-    public void authorization (User client){
-
-        if (Authentication.authentication(client.))
-
+    public void authorization(User client) {
+        cardNumber = client.getCardNumber();
+        isAuthorized = true;
     }
 
 }
