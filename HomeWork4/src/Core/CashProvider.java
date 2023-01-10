@@ -1,6 +1,5 @@
 package Core;
 
-import ClientApplication.Authentication;
 import Interfaces.ICarrierRepo;
 import Interfaces.ICashRepo;
 import Models.Carrier;
